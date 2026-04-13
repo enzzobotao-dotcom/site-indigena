@@ -1,0 +1,184 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1b5e20, #8d6e63);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* CONTAINER */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    animation: fadeDown 1s ease;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* MENU */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* EFEITO DE AMPLIAÇÃO BOTÕES */
+nav a:hover {
+    background: white;
+    color: #1b5e20;
+    transform: scale(1.15);
+}
+
+/* CARDS */
+section {
+    background: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFEITO DE AMPLIAÇÃO CAIXAS */
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* TÍTULOS */
+h2 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+/* LISTAS */
+ul {
+    margin-left: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    opacity: 0.8;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ENTRADA SUAVE DAS CAIXAS */
+section {
+    animation: fadeUp 1s ease;
+
+    /* ============================= */
+/* RESPONSIVIDADE PARA CELULAR */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    /* MENU */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    /* TEXTO */
+    p, li {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+}
+
+/* TELAS MUITO PEQUENAS */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+}
